@@ -1,0 +1,11 @@
+body {
+    font-family: 'Patua One', cursive;
+}
+
+#after_submit {
+    visibility: hidden;
+}
+
+#questionscreen {
+    display: none;
+}
