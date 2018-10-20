@@ -14,15 +14,14 @@
 <body>
    
     <h1>Trivia Game</h1>
-
+    <!--Start button-->
     <button onclick="startgame()" id="startGameBtn">Start</button>
-
+    <!--Timer-->
     <div id= "timer">
-
     </div>
-
+    <!--Trivia questions-->
     <div id= "questionscreen">
-        <!--Trivia question form-->
+        
     <form id = "quiz1" name = "quiz"> 
         <p>What is the capital of Connecticut?</p>
         <input type="radio" name="answer1" value="Hartford">Hartford<br>
@@ -32,22 +31,31 @@
     </form> 
     <br>
     <form id = "quiz2" name = "quiz"> 
-            <p>What is the capital of New York?</p>
-            <input type="radio" name="answer2" value="Hartford">Hartford<br>
-            <input type="radio" name="answer2" value="New Jersey">New Jersey<br>
-            <input type="radio" name="answer2" value="Albany">Albany<br>
-            <input type="radio" name="answer2" value="Clarksdale">Clarksdale<br>
+        <p>What is the capital of New York?</p>
+        <input type="radio" name="answer2" value="Hartford">Hartford<br>
+        <input type="radio" name="answer2" value="New Jersey">New Jersey<br>
+        <input type="radio" name="answer2" value="Albany">Albany<br>
+        <input type="radio" name="answer2" value="Clarksdale">Clarksdale<br>
     </form> 
     <br>
     <form id = "quiz3" name = "quiz"> 
-            <p>What is the capital of Texas?</p>
-            <input type="radio" name="answer3" value="Hartford">Hartford<br>
-            <input type="radio" name="answer3" value="New Jersey">New Jersey<br>
-            <input type="radio" name="answer3" value="Heartford">Heartford<br>
-            <input type="radio" name="answer3" value="Austin">Austin<br>
-            <br>
-            <input type="button" id="DoneBtn" value="Done" onclick="check();">
-        </form> 
+        <p>What is the capital of Texas?</p>
+        <input type="radio" name="answer3" value="Hartford">Hartford<br>
+        <input type="radio" name="answer3" value="New Jersey">New Jersey<br>
+        <input type="radio" name="answer3" value="Heartford">Heartford<br>
+        <input type="radio" name="answer3" value="Austin">Austin<br>
+    </form> 
+    <br>
+    <form id = "quiz4" name = "quiz"> 
+        <p>Who invented Linux?</p>
+        <input type="radio" name="answer4" value="Ronald Reagan">Ronald Reagan<br>
+        <input type="radio" name="answer4" value="Linus Torvalds">Linus Torvalds<br>
+        <input type="radio" name="answer4" value="Charles Babbage">Charles Babbage<br>
+        <input type="radio" name="answer4" value="Gary Gilmore">Gary Gilmore<br>
+        <br>           
+    </form> 
+    <!--Done button-->
+    <input type="button" id="DoneBtn" value="Done" onclick="check();">
 
     <div id = "after_submit">
         <p id = "number_correct"></p>

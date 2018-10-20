@@ -7,6 +7,7 @@ function check() {
     var question1 = $("input[name=answer1]:checked").val();
     var question2 = $("input[name=answer2]:checked").val();
     var question3 = $("input[name=answer3]:checked").val();
+    var question4 = $("input[name=answer4]:checked").val();
    
     var correct = 0;
     console.log(question1);
@@ -23,6 +24,9 @@ function check() {
             correct++;
         }
 
+        if (question4 == "Linus Torvalds") {
+            correct++;
+        }
 
     document.getElementById("after_submit").style.visibility = "visible";
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";    
@@ -32,9 +36,8 @@ function check() {
 function startgame() {
     document.getElementById("questionscreen").style.display = 'block';
     document.getElementById("startGameBtn").style.display = 'none';
-    startTimer(10, document.getElementById("timer"));
+    startTimer(30, document.getElementById("timer"));
 }
-
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
