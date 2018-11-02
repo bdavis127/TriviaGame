@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
-    <!--CSS External Style Sheet-->
+    <b><title>Trivia Game</title></b>
+    <!--CSS External Style Sheet and Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-
-   
+    <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <!--Bootstrap-->
+    
 </head>
 <body>
-   
-    <h1>Trivia Game</h1>
+    <div class="jumbotron jumbotron-fluid" id= "gameHeader">
+        <div class="container">
+          <h1 class="display-4">Trivia Game</h1>
+          <p class="lead">Click Start to begin the game.</p>
+        </div>
+    </div>
     <!--Start button-->
     <button onclick="startgame()" id="startGameBtn">Start</button>
     <!--Timer-->
     <div id= "timer">
     </div>
     <!--Trivia questions-->
-    <div id= "questionscreen">
-        
+    <div id= "questionscreen">       
     <form id = "quiz1" name = "quiz"> 
         <p>What is the capital of Connecticut?</p>
         <input type="radio" name="answer1" value="Hartford">Hartford<br>
@@ -56,7 +61,7 @@
     </form> 
     <!--Done button-->
     <input type="button" id="DoneBtn" value="Done" onclick="check();">
-
+    <!--Displays number of questions correct-->
     <div id = "after_submit">
         <p id = "number_correct"></p>
     </div>

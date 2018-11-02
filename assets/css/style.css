@@ -1,5 +1,9 @@
 body {
+    background-color: green;
+    color: black;
     font-family: 'Patua One', cursive;
+    text-align: left;
+    margin: 50px;
 }
 
 #after_submit {
@@ -8,4 +12,17 @@ body {
 
 #questionscreen {
     display: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+.lead {
+    text-align: center;
+}
+
+.jumbotron {
+    height: 30%;
+    padding: 0px;
 }

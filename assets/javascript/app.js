@@ -2,6 +2,7 @@ var stopCounter;
 function check() {
     console.log(document.quiz1);
     
+    // Started to work with this array, ended up using JQuery statements.
     // var answers = ["Hartford", "Albany", "Austin"];
     
     var question1 = $("input[name=answer1]:checked").val();
@@ -11,7 +12,7 @@ function check() {
    
     var correct = 0;
     console.log(question1);
-
+    // If statements for questions.
         if (question1 == "Hartford") {
             correct++;
         }
@@ -28,27 +29,28 @@ function check() {
             correct++;
         }
 
+    // Displays number of questions correct when timer runs out or the Done button is clicked.
     document.getElementById("after_submit").style.visibility = "visible";
     document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";    
     clearInterval(stopCounter);
 }
-
-function startgame() {
-    document.getElementById("questionscreen").style.display = 'block';
-    document.getElementById("startGameBtn").style.display = 'none';
-    startTimer(30, document.getElementById("timer"));
+    // Function to start game once Start button is clicked and display question screen.
+    function startgame() {
+        document.getElementById("questionscreen").style.display = 'block';
+        document.getElementById("startGameBtn").style.display = 'none';
+        startTimer(60, document.getElementById("timer"));
 }
+    // Timer starts when game begins
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+            stopCounter = setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-        stopCounter = setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
+            display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
             timer = duration;
